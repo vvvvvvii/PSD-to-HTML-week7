@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>產品頁</title>
+  <link rel="stylesheet" href="./assets/style/scss/all.css">
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+</head>
+
+<body>
+  <header class="bg-default sticky-top">
+    <div class="container">
+      <nav class="navbar py-1">
+        <h1 class="logo topLogo"> <!--不知道怎樣用oocss的方式命名-->
+          <a href="index.html">D'Perfume</a>
+        </h1>
+        <a class="btn ml-auto text-secondary position-relative d-inline-block d-md-none">
+          <span class="material-icons mr-1 vertical-middle">shopping_cart</span>
+          <span class="badge badge-pill badge-primary position-absolute absolute-top-center">3</span>
+        </a>
+        <ul class="nav d-none d-md-flex">
+          <li>
+            <a href="product-list.html" class="nav-link d-lg-inline-flex text-secondary lg-h5 md-h6">
+              <span class="material-icons">
+                store_mall_directory
+              </span>
+              Product
+            </a>
+          </li>
+          <li class="ml-lg-6 ml-md-5">
+            <a href="login.html" class="nav-link d-lg-inline-flex text-secondary lg-h5 md-h6">
+              <span class="material-icons">
+                person
+              </span>
+              log in
+            </a>
+          </li>
+          <li class="ml-lg-6 ml-md-5">
+            <a href="wish-list.html" class="nav-link d-lg-inline-flex text-secondary lg-h5 md-h6">
+              <span class="material-icons">
+                favorite
+              </span>
+              Wishlist
+            </a>
+          </li>
+          <li class="ml-lg-6 ml-md-5">
+            <a href="cart.html" class="nav-link d-lg-inline-flex text-secondary lg-h5 md-h6">
+              <span class="material-icons">
+                shopping_cart
+              </span>
+              Cart(3)
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler p-0 border-0 collapsed text-secondary d-md-none" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="material-icons">menu</span>      
+        </button>
+        <div class="navbar-collapse collapse" id="navbarToggle">
+          <ul class="navbar-nav d-block d-lg-none">
+            <li>
+              <a href="product-list.html" class="btn btn-secondary w-100 rounded-0 text-center text-default border-bottom">Product</a>
+            </li>
+            <li>
+              <a href="wishlist.html" class="btn btn-secondary w-100 rounded-0 text-center text-default border-bottom">Wishlist</a>
+            </li>
+            <li>
+              <a href="blog.html" class="btn btn-secondary w-100 rounded-0 text-center text-default border-bottom">Blog</a>
+            </li>
+            <li>
+              <a href="contact.html" class="btn btn-secondary w-100 rounded-0 text-center text-default border-bottom">Contact</a>
+            </li>
+            <li>
+              <a href="login.html" class="btn btn-secondary w-100 rounded-0 text-center text-default border-bottom">log in</a>
+            </li>
+          </ul>
+        </div>
+      </nav>  
+    </div>
+  </header>
+
+  <nav class="bg-primary">
+  <div class="container">
+    <ul class="nav company-nav-py justify-content-lg-start justify-content-md-center d-md-flex d-none">
+      <li>
+        <a href="#" class="nav-link text-default h5">CHANEL</a>
+      </li>
+      <li class="ml-4">
+          <a href="#" class="nav-link text-default h5">Jo Malone</a>
+      </li>
+      <li class="ml-4">
+        <a href="#" class="nav-link text-default h5">Curology</a>
+      </li>
+      <li class="ml-4">
+        <a href="#" class="nav-link text-default h5">Dior</a>
+      </li>
+      <li class="ml-4">
+        <a href="#" class="nav-link text-default h5">Chloe</a>
+      </li>
+      <li class="ml-4">
+        <a href="#" class="nav-link text-default h5">ZARA</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <div class="pt-md-10 pt-sm-8 pb-md-9 pb-sm-8"> 
+    <ul class="row">
+      <li class="col-lg-3 col-md-4 col-6">
+        <div class="card product-nav-mb border-0"> 
+          <div class="square">
+            <a href="#">
+              <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/products1.jpg?raw=true" alt="Jo Malone" title="點我看更多商品訊息"> 
+            </a>
+          </div>
+          <h2 class="card-title font-weight-bold">Poppy & Barley</h2>
+          <h3 class="card-subtitle">Jo Malone</h3>
+          <h3 class="card-text">
+            NT$1,380
+            <span class="text-secondary text-decoration-line-through">
+              NT$1,580
+            </span>
+          </h3>
+          <div class="d-flex">
+            <button class="card-link border-0 p-0" data-toggle="modal" data-target="#addFavorite1">
+              <span class="material-icons">
+                favorite
+              </span>
+            </button>
+            <div class="modal fade" id="addFavorite1" tabindex="-1" role="dialog" aria-labelledby="addFavorite1" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p class="text-center text-primary">
+                      已加入我的收藏
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="card-link border-0 p-0" data-toggle="modal" data-target="#addCart1">
+              <span class="material-icons">
+                shopping_cart
+              </span>
+            </button>
+            <div class="modal fade" id="addCart1" tabindex="-1" role="dialog" aria-labelledby="addCart1" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p class="text-center text-primary">
+                      已加入購物車
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="col-lg-3 col-md-4 col-6">
+        <div class="card product-nav-mb border-0">
+          <div class="square">
+            <a href="#">
+              <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/index6.jpg?raw=true" alt="Jo Malone" title="點我看更多商品訊息"> 
+            </a>
+          </div>
+          <h2 class="card-title font-weight-bold">Poppy & Barley</h2>
+          <h3 class="card-subtitle">Jo Malone</h3>
+          <h3 class="card-text">
+            NT$1,380
+            <span class="text-secondary text-decoration-line-through">
+              NT$1,580
+            </span>
+          </h3>
+          <div class="d-flex">
+            <button class="card-link border-0 p-0" data-toggle="modal" data-target="#addFavorite2">
+              <span class="material-icons">
+                favorite
+              </span>
+            </button>
+            <div class="modal fade" id="addFavorite2" tabindex="-1" role="dialog" aria-labelledby="addFavorite2" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p class="text-center text-primary">
+                      已加入我的收藏
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="card-link border-0 p-0" data-toggle="modal" data-target="#addCart2">
+              <span class="material-icons">
+                shopping_cart
+              </span>
+            </button>
+            <div class="modal fade" id="addCart2" tabindex="-1" role="dialog" aria-labelledby="addCart2" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p class="text-center text-primary">
+                      已加入購物車
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="col-lg-3 col-md-4 col-6">
+        <div class="card product-nav-mb border-0">
+          <div class="square">
+            <a href="#">
+              <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/products3.jpg?raw=true" alt="Jo Malone" title="點我看更多商品訊息"> 
+            </a>
+          </div>
+          <h2 class="card-title font-weight-bold">Poppy & Barley</h2>
+          <h3 class="card-subtitle">Jo Malone</h3>
+          <h3 class="card-text">NT$1,380</h3>
+          <div class="d-flex">
+            <button class="card-link border-0 p-0" data-toggle="modal" data-target="#addFavorite3">
+              <span class="material-icons">
+                favorite
+              </span>
+            </button>
+            <div class="modal fade" id="addFavorite3" tabindex="-1" role="dialog" aria-labelledby="addFavorite3" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p class="text-center text-primary">
+                      已加入我的收藏
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="card-link border-0 p-0" data-toggle="modal" data-target="#addCart3">
+              <span class="material-icons">
+                shopping_cart
+              </span>
+            </button>
+            <div class="modal fade" id="addCart3" tabindex="-1" role="dialog" aria-labelledby="addCart3" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p class="text-center text-primary">
+                      已加入購物車
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="col-lg-3 col-md-4 col-6">
+        <div class="card product-nav-mb border-0">
+          <div class="square">
+            <a href="#">
+              <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/products4.jpg?raw=true" alt="Jo Malone" title="點我看更多商品訊息"> 
+            </a>
+          </div>
+          <h2 class="card-title font-weight-bold">Poppy & Barley</h2>
+          <h3 class="card-subtitle">Jo Malone</h3>
+          <h3 class="card-text">NT$1,380</h3>
+          <div class="d-flex">
+            <button class="card-link border-0 p-0" data-toggle="modal" data-target="#addFavorite4">
+              <span class="material-icons">
+                favorite
+              </span>
+            </button>
+            <div class="modal fade" id="addFavorite4" tabindex="-1" role="dialog" aria-labelledby="addFavorite4" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p class="text-center text-primary">
+                      已加入我的收藏
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="card-link border-0 p-0" data-toggle="modal" data-target="#addCart4">
+              <span class="material-icons">
+                shopping_cart
+              </span>
+            </button>
+            <div class="modal fade" id="addCart4" tabindex="-1" role="dialog" aria-labelledby="addCart4" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p class="text-center text-primary">
+                      已加入購物車
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="col-lg-3 col-md-4 col-6">
+        <div class="card product-nav-mb border-0">
+          <div class="square">
+            <a href="#">
+              <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/products5.jpg?raw=true" alt="Jo Malone" title="點我看更多商品訊息"> 
+            </a>
+          </div>
+          <h2 class="card-title font-weight-bold">Poppy & Barley</h2>
+          <h3 class="card-subtitle">Jo Malone</h3>
+          <h3 class="card-text">
+            NT$1,380
+            <span class="text-secondary text-decoration-line-through">
+              NT$1,580
+            </span>
+          </h3>
+          <div class="d-flex">
+            <button class="card-link border-0 p-0" data-toggle="modal" data-target="#addFavorite5">
+              <span class="material-icons">
+                favorite
+              </span>
+            </button>
+            <div class="modal fade" id="addFavorite5" tabindex="-1" role="dialog" aria-labelledby="addFavorite5" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p class="text-center text-primary">
+                      已加入我的收藏
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="card-link border-0 p-0" data-toggle="modal" data-target="#addCart5">
+              <span class="material-icons">
+                shopping_cart
+              </span>
+            </button>
+            <div class="modal fade" id="addCart5" tabindex="-1" role="dialog" aria-labelledby="addCart5" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p class="text-center text-primary">
+                      已加入購物車
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="col-lg-3 col-md-4 col-6">
+        <div class="card product-nav-mb border-0">
+          <div class="square">
+            <a href="#">
+              <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/index4.jpg?raw=true" alt="Jo Malone" class="card-img" title="點我看更多商品訊息"> 
+            </a>
+          </div>
+          <h2 class="card-title font-weight-bold">Poppy & Barley</h2>
+          <h3 class="card-subtitle">Jo Malone</h3>
+          <h3 class="card-text">
+            NT$1,380
+            <span class="text-secondary text-decoration-line-through">
+              NT$1,580
+            </span>
+          </h3>
+          <div class="d-flex">
+            <button class="card-link border-0 p-0" data-toggle="modal" data-target="#addFavorite6">
+              <span class="material-icons">
+                favorite
+              </span>
+            </button>
+            <div class="modal fade" id="addFavorite6" tabindex="-1" role="dialog" aria-labelledby="addFavorite6" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p class="text-center text-primary">
+                      已加入我的收藏
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="card-link border-0 p-0" data-toggle="modal" data-target="#addCart6">
+              <span class="material-icons">
+                shopping_cart
+              </span>
+            </button>
+            <div class="modal fade" id="addCart6" tabindex="-1" role="dialog" aria-labelledby="addCart6" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p class="text-center text-primary">
+                      已加入購物車
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="col-lg-3 col-md-4 col-6">
+        <div class="card product-nav-mb border-0">
+          <div class="square">
+            <a href="#">
+              <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/products7.jpg?raw=true" alt="Jo Malone" title="點我看更多商品訊息"> 
+            </a>
+          </div>
+          <h2 class="card-title font-weight-bold">Poppy & Barley</h2>
+          <h3 class="card-subtitle">Jo Malone</h3>
+          <h3 class="card-text">NT$1,380</h3>
+          <div class="d-flex">
+            <button class="card-link border-0 p-0" data-toggle="modal" data-target="#addFavorite7">
+              <span class="material-icons">
+                favorite
+              </span>
+            </button>
+            <div class="modal fade" id="addFavorite7" tabindex="-1" role="dialog" aria-labelledby="addFavorite7" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p class="text-center text-primary">
+                      已加入我的收藏
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="card-link border-0 p-0" data-toggle="modal" data-target="#addCart7">
+              <span class="material-icons">
+                shopping_cart
+              </span>
+            </button>
+            <div class="modal fade" id="addCart7" tabindex="-1" role="dialog" aria-labelledby="addCart7" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p class="text-center text-primary">
+                      已加入購物車
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="col-lg-3 col-md-4 col-6">
+        <div class="card product-nav-mb border-0">
+          <div class="square">
+            <a href="#">
+              <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/products8.jpg?raw=true" alt="Jo Malone" title="點我看更多商品訊息"> 
+            </a>
+          </div>
+          <h2 class="card-title font-weight-bold">Poppy & Barley</h2>
+          <h3 class="card-subtitle">Jo Malone</h3>
+          <h3 class="card-text">NT$1,380</h3>
+          <div class="d-flex">
+            <button class="card-link border-0 p-0" data-toggle="modal" data-target="#addFavorite8">
+              <span class="material-icons">
+                favorite
+              </span>
+            </button>
+            <div class="modal fade" id="addFavorite8" tabindex="-1" role="dialog" aria-labelledby="addFavorite8" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p class="text-center text-primary">
+                      已加入我的收藏
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="card-link border-0 p-0" data-toggle="modal" data-target="#addCart8">
+              <span class="material-icons">
+                shopping_cart
+              </span>
+            </button>
+            <div class="modal fade" id="addCart8" tabindex="-1" role="dialog" aria-labelledby="addCart8" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p class="text-center text-primary">
+                      已加入購物車
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="col-lg-3 col-md-4 col-6">
+        <div class="card product-nav-mb border-0">
+          <div class="square">
+            <a href="#">
+              <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/index3.png?raw=true" alt="Jo Malone" title="點我看更多商品訊息"> 
+            </a>
+          </div>
+          <h2 class="card-title font-weight-bold">Poppy & Barley</h2>
+          <h3 class="card-subtitle">Jo Malone</h3>
+          <h3 class="card-text">
+            NT$1,380
+            <span class="text-secondary text-decoration-line-through">
+              NT$1,580
+            </span>
+          </h3>
+          <div class="d-flex">
+            <button class="card-link border-0 p-0" data-toggle="modal" data-target="#addFavorite9">
+              <span class="material-icons">
+                favorite
+              </span>
+            </button>
+            <div class="modal fade" id="addFavorite9" tabindex="-1" role="dialog" aria-labelledby="addFavorite9" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p class="text-center text-primary">
+                      已加入我的收藏
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="card-link border-0 p-0" data-toggle="modal" data-target="#addCart9">
+              <span class="material-icons">
+                shopping_cart
+              </span>
+            </button>
+            <div class="modal fade" id="addCart9" tabindex="-1" role="dialog" aria-labelledby="addCart9" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p class="text-center text-primary">
+                      已加入購物車
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="col-lg-3 col-md-4 col-6">
+        <div class="card product-nav-mb border-0">
+          <div class="square">
+            <a href="#">
+              <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/products10.jpg?raw=true" alt="Jo Malone" title="點我看更多商品訊息"> 
+            </a>
+          </div>
+          <h2 class="card-title font-weight-bold">Poppy & Barley</h2>
+          <h3 class="card-subtitle">Jo Malone</h3>
+          <h3 class="card-text">
+            NT$1,380
+            <span class="text-secondary text-decoration-line-through">
+              NT$1,580
+            </span>
+          </h3>
+          <div class="d-flex">
+            <button class="card-link border-0 p-0" data-toggle="modal" data-target="#addFavorite10">
+              <span class="material-icons">
+                favorite
+              </span>
+            </button>
+            <div class="modal fade" id="addFavorite10" tabindex="-1" role="dialog" aria-labelledby="addFavorite10" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p class="text-center text-primary">
+                      已加入我的收藏
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="card-link border-0 p-0" data-toggle="modal" data-target="#addCart10">
+              <span class="material-icons">
+                shopping_cart
+              </span>
+            </button>
+            <div class="modal fade" id="addCart10" tabindex="-1" role="dialog" aria-labelledby="addCart10" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p class="text-center text-primary">
+                      已加入購物車
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="col-lg-3 col-md-4 col-6">
+        <div class="card product-nav-mb border-0">
+          <div class="square">
+            <a href="#">
+              <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/products11.jpg?raw=true" alt="Jo Malone" title="點我看更多商品訊息"> 
+            </a>
+          </div>
+          <h2 class="card-title font-weight-bold">Poppy & Barley</h2>
+          <h3 class="card-subtitle">Jo Malone</h3>
+          <h3 class="card-text">NT$1,380</h3>
+          <div class="d-flex">
+            <button class="card-link border-0 p-0" data-toggle="modal" data-target="#addFavorite11">
+              <span class="material-icons">
+                favorite
+              </span>
+            </button>
+            <div class="modal fade" id="addFavorite11" tabindex="-1" role="dialog" aria-labelledby="addFavorite11" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p class="text-center text-primary">
+                      已加入我的收藏
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="card-link border-0 p-0" data-toggle="modal" data-target="#addCart11">
+              <span class="material-icons">
+                shopping_cart
+              </span>
+            </button>
+            <div class="modal fade" id="addCart11" tabindex="-1" role="dialog" aria-labelledby="addCart11" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p class="text-center text-primary">
+                      已加入購物車
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="col-lg-3 col-md-4 col-6">
+        <div class="card product-nav-mb border-0">
+          <div class="square">
+            <a href="#">
+              <img src="https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/products12.jpg?raw=true" alt="Jo Malone" title="點我看更多商品訊息"> 
+            </a>
+          </div>
+          <h2 class="card-title font-weight-bold">Poppy & Barley</h2>
+          <h3 class="card-subtitle">Jo Malone</h3>
+          <h3 class="card-text">NT$1,380</h3>
+          <div class="d-flex">
+            <button class="card-link border-0 p-0" data-toggle="modal" data-target="#addFavorite12">
+              <span class="material-icons">
+                favorite
+              </span>
+            </button>
+            <div class="modal fade" id="addFavorite12" tabindex="-1" role="dialog" aria-labelledby="addFavorite12" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p class="text-center text-primary">
+                      已加入我的收藏
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="card-link border-0 p-0" data-toggle="modal" data-target="#addCart12">
+              <span class="material-icons">
+                shopping_cart
+              </span>
+            </button>
+            <div class="modal fade" id="addCart12" tabindex="-1" role="dialog" aria-labelledby="addCart12" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p class="text-center text-primary">
+                      已加入購物車
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <nav aria-label="Page navigation">
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <a class="page-link h5" href="#">1</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link h5" href="#">2</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link h5" href="#">3</a>
+        </li>
+      </ul>
+    </nav>
+  </div>  
+</div>
+<div class="bg-footer-banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-12">
+        <h2 class="text-secondary mb-3 font-weight-bold">
+          記得<br>
+          訂閱以獲取更多資訊！
+        </h2>
+        <div class="input-group">
+          <input type="text" class="form-control border-primary" placeholder="Your email address" aria-label="Customer's email">
+          <div class="input-group-append">
+            <button class="btn btn-outline-primary bg-primary text-default py-3" type="button" id="button-addon2">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <footer class="bg-primary">
+    <div class="container">
+      <nav class="navbar">
+        <div class="d-flex align-items-center justify-content-sm-between">
+          <h4 class="logo footerLogo"> <!--不知道怎樣用oocss的方式命名-->
+            <a href="index.html">D'Perfume</a>
+          </h4>
+          <p class="text-default ml-3">
+            © 2020. All Rights Reserved.
+          </p>
+        </div>
+        <ul class="nav py-4">
+          <li class="d-none d-md-block">
+            <a href="product-list.html" class="nav-link text-default d-lg-inline-flex lg-h5 md-h6">
+              Product
+            </a>
+          </li>
+          <li class="ml-lg-7 ml-md-2 d-none d-md-block">
+            <a href="blog.html" class="nav-link text-default d-lg-inline-flex lg-h5 md-h6">
+              Blog
+            </a>
+          </li>
+          <li class="ml-lg-7 ml-md-2 d-none d-md-block">
+            <a href="contact.html" class="nav-link text-default d-lg-inline-flex lg-h5 md-h6">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="./assets/js/vendors.js"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
